@@ -19,5 +19,8 @@ dependencies = [
     "pyyaml"
 ]
 
-[project.optional-dependencies]
-dev = ["pytest"]
+[project.scripts]
+server = "server.app:app"
+
+[tool.uv]
+package = true
