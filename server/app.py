@@ -70,6 +70,9 @@ async def grade(task: str):
 async def root():
     return {"message": "CIRE Environment is Live. Use /health to check status."}
 
-if __name__ == "__main__":
+def main():
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=7860)
+    uvicorn.run("server.app:app", host="0.0.0.0", port=7860, reload=False)
+
+if __name__ == "__main__":
+    main()
