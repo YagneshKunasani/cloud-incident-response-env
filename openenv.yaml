@@ -1,17 +1,14 @@
-name: "cloud-incident-response-env"
-version: "1.0.0"
+name: "Cloud Incident Response Environment"
 description: "A microservice failure simulation for AI SRE agents."
+version: "0.1.0"
+
 tasks:
-- id: "easy"
-difficulty: "easy"
-description: "Fix a crashed frontend service."
-- id: "medium"
-difficulty: "medium"
-description: "Diagnose and resolve database latency."
-- id: "hard"
-difficulty: "hard"
-description: "Rollback a buggy deployment causing memory leak."
-tags:
-- "infrastructure"
-- "sre"
-- "reasoning"
+  - id: "easy"
+    description: "Frontend process recovery"
+    weight: 0.2
+  - id: "medium"
+    description: "Database connection stabilization"
+    weight: 0.3
+  - id: "hard"
+    description: "Detection and rollback of memory leak v2"
+    weight: 0.5
